@@ -7,4 +7,10 @@
 module.exports = {
   /* Your site config here */
   plugins: [],
+  siteMetadata : {
+    description : 'Web dev portfolio',
+    title : 'webwarrior',
+    copyright : 'This website is copyright 2021'
+
+  }
 }
