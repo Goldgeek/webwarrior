@@ -7,11 +7,11 @@
 import React from "react"
 import Layout from '../components/Layout'
 import * as styles from '../styles/home.module.css' 
-import {graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 
-export default function Home({data}) { // Home pour accueil du site
-  console.log(data)
+export default function Home() { // Home pour accueil du site
+  
   return (
     <Layout>
       <section className={styles.header}>
@@ -27,15 +27,3 @@ export default function Home({data}) { // Home pour accueil du site
   )
    
 }
-
-export const query = graphql`
-  query SiteInfo {
-    site {
-      siteMetadata {
-        description
-        title
-      }
-    }
-  }
-`
-
