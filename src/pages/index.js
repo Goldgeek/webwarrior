@@ -2,6 +2,7 @@
 //PAGE DE BASE
 // A LOADER EN PREMIER
 // Ici Navabr, sert de liens vers d'autres pages à partir de la page d'accueil. C'est une composante react importée
+// all static data like img and other static assets should be put in static folder to let them available on internet  
 
 import React from "react"
 import Layout from '../components/Layout'
@@ -13,10 +14,12 @@ export default function Home() { // Home pour accueil du site
     <Layout>
       <section className={styles.header}>
         <div>
-          <h2 >Accueil</h2>
+          <h2 >Design</h2>
+          <h3>Develop & Deploy</h3>
+          <p>UK designer & web developer based in Manchester</p>
           <Link className={styles.btn} to="/projects">Portfolio Projects</Link>
         </div>
-        
+        <img src="/banner.png" alt="Banner" style={{ maxWidth: '100%' }} />
       </section>
     </Layout>
   )
