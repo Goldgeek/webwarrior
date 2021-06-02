@@ -2,8 +2,12 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import * as styles from '../../styles/projects.module.css'
+import { graphql } from 'gatsby'
 
-export default function Projects() { // Ici la composante react porte le nom du dossier
+export default function Projects({data}) { // Ici la composante react porte le nom du dossier
+    console.log(data)
+    const projects
+    
     return (
         <Layout>
             <div className={styles.portfolio}>
@@ -13,3 +17,18 @@ export default function Projects() { // Ici la composante react porte le nom du 
         </Layout>
     )
 }
+
+//export query 
+export const query = graphql`
+query ProjectsPage {
+    allMarkdownRemark {
+        nodes {
+            frontmatter {
+                slug
+                stack
+                title
+            }
+            id
+        }
+    }
+}`
